@@ -181,6 +181,14 @@ class _HomePageState extends State<HomePage>
                 );
               }),
         ),
+           ElevatedButton(
+               onPressed: ()async{
+             await  Navigator.push(context,
+                 PageTransition(type: PageTransitionType.leftToRightJoined,
+                   duration: const Duration(seconds: 4) ,
+                   curve: Curves.bounceIn,
+                   child:const Login(),  childCurrent: const HomePage(), ));
+           }, child: Text(" Next "))
       ],
     ));
   }
@@ -198,13 +206,7 @@ class GridItem extends StatelessWidget {
         CircleAvatar(
           backgroundColor: colorModel.color,
         ),
-        ElevatedButton(onPressed: ()async{
-          await  Navigator.push(context,
-              PageTransition(type: PageTransitionType.leftToRightJoined,
-                  duration: const Duration(seconds: 4) ,
-                   curve: Curves.bounceIn,
-                  child:const Login(),  childCurrent: const HomePage(), ));
-        }, child: Text(" Next "))
+
       ],
     );
   }

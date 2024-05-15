@@ -13,7 +13,7 @@ bool isLoading = false;
 String v= "hello group 60";
 
 getData()async{
-  await Future.delayed(Duration(seconds: 5));
+  await Future.delayed(const Duration(seconds: 5));
   setState(() {
     isLoading = true;
   });
@@ -35,7 +35,7 @@ getData()async{
             baseColor: Colors.grey.shade300,
             highlightColor: Colors.grey.shade100,
             child: Container(
-              width: 100,
+              width: 300,
               height: 200,
               child:  Text(v, style: TextStyle(
                 fontSize:  20,
@@ -57,7 +57,7 @@ class  ConWithoutShimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-            width: 100,
+            width: 300,
             height: 200,
             color:  Colors.pink,
             child:  Text(x, style: TextStyle(
